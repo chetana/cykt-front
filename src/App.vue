@@ -25,7 +25,8 @@ export default {
     async fetchData() {
       try {
         // Remplacez VOTRE_API_URL par l'URL de votre API
-        const response = await fetch(`https://cykt-app-mef67kip3a-ew.a.run.app/chef/${this.userInput}`);
+        const response = await this.$axios.get(`https://cykt-app-mef67kip3a-ew.a.run.app/chef/${this.userInput}`); // Remplacez par l'URL de votre endpoint
+
         const data = await response.json();
         this.apiResponse = data;
       } catch (error) {
